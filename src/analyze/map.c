@@ -6,41 +6,11 @@
 /*   By: ksoto <ksoto@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 22:35:32 by ksoto             #+#    #+#             */
-/*   Updated: 2021/11/10 14:17:56 by ksoto            ###   ########.fr       */
+/*   Updated: 2021/11/10 15:11:09 by ksoto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
-
-void	ft_extract_color(t_fdf *fdf, char *str, int y, int x)
-{
-	int		i;
-	int		j;
-	int		len;
-	char	*tmp;
-
-	i = 0;
-	while (str[i])
-	{
-		if (str[i] == ',')
-		{
-			while (str[i] == ',' || str[i] == '0' || str[i] == 'x')
-				i++;
-			len = i;
-			while (str[len])
-				len++;
-			tmp = ft_memalloc(sizeof(char) * (len - i + 1));
-			j = 0;
-			while (str[i])
-				tmp[j++] = str[i++];
-			tmp[j] = '\0';
-			fdf->map[y][x].color = ft_atoi_base(tmp, 16);
-			free(tmp);
-			break;
-		}
-		i++;
-	}
-}
 
 static int	extract_line(t_fdf *fdf, char *line, int y)
 {

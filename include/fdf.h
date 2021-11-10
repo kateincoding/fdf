@@ -6,7 +6,7 @@
 /*   By: ksoto <ksoto@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/10 18:33:16 by ksoto             #+#    #+#             */
-/*   Updated: 2021/11/10 14:36:37 by ksoto            ###   ########.fr       */
+/*   Updated: 2021/11/10 15:11:53 by ksoto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,7 @@ void	plot_map(t_fdf *fdf);
 void	wireframe(char *name);
 void	load_map(t_fdf *fdf, char *name);
 void	free_map(void);
+void	ft_extract_color(t_fdf *fdf, char *str, int y, int x);
 
 /*
 ** Compute

@@ -6,7 +6,7 @@
 #    By: ksoto <ksoto@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/20 17:00:07 by ksoto             #+#    #+#              #
-#    Updated: 2021/11/10 14:35:48 by ksoto            ###   ########.fr        #
+#    Updated: 2021/11/10 15:10:30 by ksoto            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ DIRCOM		=	$(DIRSRC)/compute/
 DIRDIS		=	$(DIRSRC)/display/
 
 SRC			=	main.c aux.c
-ANALYZE		=	analyze.c map.c
+ANALYZE		=	analyze.c map.c color.c
 COMPUTE		=	compute.c navigate.c
 DISPLAY		=	render.c
 
