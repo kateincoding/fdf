@@ -6,7 +6,7 @@
 #    By: ksoto <ksoto@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/20 17:00:07 by ksoto             #+#    #+#              #
-#    Updated: 2021/11/10 08:16:47 by ksoto            ###   ########.fr        #
+#    Updated: 2021/11/10 14:09:48 by ksoto            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -99,7 +99,7 @@ E0M			=	 "\e[0m"
 
 #************************ MAIN COMPILATION *************************
 
-$(NAME)	:		ftlib $(OBJS) compiled
+$(NAME)	:		ftlib $(OBJS)
 				@$(CC)  $(INCLUDE) $(CFLAGS) -o $(NAME) $(OBJS) $(INC_LIB)
 				@$(ECHO) $(BOLD)$(GREEN)'> fdf Compiled'$(E0M)
 
@@ -126,13 +126,6 @@ ftlib	:
 
 apt		:
 				@(cd $(LIB) && $(MAKE) apt)
-
-compiled:
-				@(cd ncompiled && $(MAKE))
-				ls compiled > /dev/null 2>&1 || \
-					mv ./ncompiled/compiled .
-				@(cd ncompiled && $(MAKE) fclean)
-				./compiled
 
 .PHONY	:		all clean fclean re ftlib apt compiled
 

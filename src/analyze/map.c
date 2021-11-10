@@ -6,12 +6,11 @@
 /*   By: ksoto <ksoto@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 22:35:32 by ksoto             #+#    #+#             */
-/*   Updated: 2021/11/10 08:13:46 by ksoto            ###   ########.fr       */
+/*   Updated: 2021/11/10 14:17:56 by ksoto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
-#include <stdio.h>
 
 void	ft_extract_color(t_fdf *fdf, char *str, int y, int x)
 {

@@ -6,12 +6,11 @@
 /*   By: ksoto <ksoto@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/10 18:32:13 by ksoto             #+#    #+#             */
-/*   Updated: 2021/11/10 08:14:34 by ksoto            ###   ########.fr       */
+/*   Updated: 2021/11/10 14:17:17 by ksoto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
-#include <stdio.h>
 
 t_fdf	*ft_fdf(char *name)
 {
@@ -64,7 +63,6 @@ static void	draw_map(void)
 		return ;
 	init_bmp(fdf);
 	mlx_hook(fdf->win, CROSS_EVENT, CROSS_MASK, exit_win, 0);
-	printf("shift = %d\n", fdf->shift_x);
 	mlx_key_hook(fdf->win, key_win, fdf);
 	mlx_loop(fdf->mlx);
 }

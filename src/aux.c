@@ -6,12 +6,11 @@
 /*   By: ksoto <ksoto@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 03:08:17 by ksoto             #+#    #+#             */
-/*   Updated: 2021/10/13 03:17:38 by ksoto            ###   ########.fr       */
+/*   Updated: 2021/11/10 14:29:07 by ksoto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
-#include <stdio.h>
 
 void	continue_exit(t_fdf *fdf)
 {
@@ -59,7 +58,7 @@ void	init_map(t_fdf	*fdf)
 	set_coord(fdf->init, 0, 0);
 	set_coord(fdf->end, 0, 0);
 	fdf->view = 3;
-	fdf->zoom = 100;
+	fdf->zoom = 50;
 	fdf->shift_x = 150;
 	fdf->shift_y = 150;
 	fdf->zoom = 1;
@@ -92,9 +91,9 @@ int	key_win(int key, t_fdf *fdf)
 	}
 	handle_shift(key, fdf);
 	if (key == 65293)
-		fdf->zoom += 20;
+		fdf->zoom += 10;
 	if (key == 65506)
-		fdf->zoom -= 20;
+		fdf->zoom -= 10;
 	plot_map(fdf);
 	return (0);
 }

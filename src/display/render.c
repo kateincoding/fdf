@@ -6,7 +6,7 @@
 /*   By: ksoto <ksoto@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/11 01:27:49 by ksoto             #+#    #+#             */
-/*   Updated: 2021/11/10 13:39:42 by ksoto            ###   ########.fr       */
+/*   Updated: 2021/11/10 14:21:07 by ksoto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,7 +125,6 @@ void	plot_map(t_fdf *fdf)
 		while (++x < fdf->res[0])
 			fdf->bmp[y][x] = 0;
 	}
-//	mlx_clear_window(fdf->mlx, fdf->win);
 	bresenham_loop(fdf);
 	ft_plot(fdf->bmp);
 }
